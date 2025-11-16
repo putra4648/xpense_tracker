@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:income_expense_tracker_app/utils/currency_format.dart';
+import 'package:expense_tracker_app/utils/currency_format.dart';
 
 class TotalBalance extends StatelessWidget {
   const TotalBalance({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class TotalBalance extends StatelessWidget {
           children: [
             Text(
               'Total Balance',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -38,7 +38,7 @@ class TotalBalance extends StatelessWidget {
         ),
         Text(
           currencyDollarFormat('2212'),
-          style: Theme.of(context).textTheme.headline5?.copyWith(
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 fontWeight: FontWeight.w700,
               ),
         ),

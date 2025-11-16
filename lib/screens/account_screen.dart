@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:income_expense_tracker_app/data/accounts.dart';
-import 'package:income_expense_tracker_app/widgets/header.dart';
+import 'package:expense_tracker_app/data/accounts.dart';
+import 'package:expense_tracker_app/widgets/header.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -54,7 +54,7 @@ class AccountScreen extends StatelessWidget {
                     'Jonatahan Buddy',
                     style: Theme.of(context)
                         .textTheme
-                        .headline6
+                        .titleLarge
                         ?.copyWith(fontWeight: FontWeight.w600),
                   ),
                   SizedBox(
@@ -62,7 +62,7 @@ class AccountScreen extends StatelessWidget {
                   ),
                   Text(
                     'jonathan@yahoo.co.uk',
-                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: Theme.of(context).colorScheme.primary,
                         ),
                   )

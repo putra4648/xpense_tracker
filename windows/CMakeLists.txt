@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(income_expense_tracker_app LANGUAGES CXX)
+project(expense_tracker_app LANGUAGES CXX)
 
-set(BINARY_NAME "income_expense_tracker_app")
+set(BINARY_NAME "expense_tracker_app")
 
 cmake_policy(SET CMP0063 NEW)
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:income_expense_tracker_app/screens/account_screen.dart';
-import 'package:income_expense_tracker_app/screens/home_screen.dart';
-import 'package:income_expense_tracker_app/screens/statisctic_screen.dart';
-import 'package:income_expense_tracker_app/screens/wallet_screen.dart';
+import 'package:expense_tracker_app/screens/account_screen.dart';
+import 'package:expense_tracker_app/screens/home_screen.dart';
+import 'package:expense_tracker_app/screens/statisctic_screen.dart';
+import 'package:expense_tracker_app/screens/wallet_screen.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);

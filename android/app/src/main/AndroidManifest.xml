@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.income_expense_tracker_app">
+    package="com.example.expense_tracker_app">
    <application
-        android:label="income_expense_tracker_app"
+        android:label="expense_tracker_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

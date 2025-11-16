@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:income_expense_tracker_app/utils/currency_format.dart';
+import 'package:expense_tracker_app/utils/currency_format.dart';
 
 import 'background_button.dart';
 
@@ -38,7 +38,7 @@ class CustomListTile extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Text(
                   title,
-                  style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         letterSpacing: 0.5,
                         fontWeight: FontWeight.w500,
                       ),
@@ -51,7 +51,7 @@ class CustomListTile extends StatelessWidget {
           child: Text(
             currencyDollarFormat(money),
             textAlign: TextAlign.right,
-            style: Theme.of(context).textTheme.headline6?.copyWith(
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w600,
                 ),
           ),

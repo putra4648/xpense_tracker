@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:income_expense_tracker_app/app.dart';
-import 'package:income_expense_tracker_app/screens/wizard_screen.dart';
+import 'package:expense_tracker_app/app.dart';
+import 'package:expense_tracker_app/screens/wizard_screen.dart';
 
 class AppRoutes {
   static const wizardRoute = '/';

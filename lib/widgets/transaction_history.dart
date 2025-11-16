@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:income_expense_tracker_app/data/transactions.dart';
-import 'package:income_expense_tracker_app/utils/currency_format.dart';
+import 'package:expense_tracker_app/data/transactions.dart';
+import 'package:expense_tracker_app/utils/currency_format.dart';
 
 class TransactionHistory extends StatefulWidget {
   const TransactionHistory({Key? key}) : super(key: key);
@@ -48,7 +48,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                   title: Text(tx['title']!),
                   subtitle: Text(
                     tx['date']!,
-                    style: Theme.of(context).textTheme.subtitle2?.copyWith(
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
                           color: const Color.fromRGBO(102, 102, 102, 1),
                           fontWeight: FontWeight.w400,
                         ),

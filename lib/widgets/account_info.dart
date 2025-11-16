@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 
 import 'background_button.dart';
@@ -29,7 +29,7 @@ class AccountInformation extends StatelessWidget {
             ),
             subtitle: Text(
               'Enjelin Morgeana',
-              style: Theme.of(context).textTheme.headline5?.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w600,
                     color: Theme.of(context).colorScheme.onPrimary,
                   ),
@@ -37,13 +37,13 @@ class AccountInformation extends StatelessWidget {
             trailing: BackgroundButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
-              child: Badge(
+              child: badges.Badge(
                 child: Icon(
                   Icons.notifications_outlined,
                   color: Theme.of(context).colorScheme.onPrimary,
                 ),
-                badgeColor: const Color(0xffFFAB7B),
-                position: BadgePosition.topEnd(top: 3, end: 1),
+                // badgeColor: const Color(0xffFFAB7B),
+                position: badges.BadgePosition.topEnd(top: 3, end: 1),
               ),
             ),
           ),
@@ -67,13 +67,13 @@ class AccountInformation extends StatelessWidget {
                   blurRadius: 50,
                 ),
               ]),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const TotalBalance(),
-                  const SizedBox(height: 20),
+                  TotalBalance(),
+                  SizedBox(height: 20),
                   Row(
-                    children: const [
+                    children: [
                       CustomListTile(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         icons: Icons.arrow_downward,

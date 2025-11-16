@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:income_expense_tracker_app/routes/main.dart';
-import 'package:income_expense_tracker_app/widgets/gradient_button.dart';
+import 'package:expense_tracker_app/routes/main.dart';
+import 'package:expense_tracker_app/widgets/gradient_button.dart';
 
 class WizardScreen extends StatefulWidget {
   const WizardScreen({Key? key}) : super(key: key);
@@ -29,7 +29,7 @@ class _WizardScreenState extends State<WizardScreen> {
           Text(
             'Spend Smarter\nSave More',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headline4?.copyWith(
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                   fontWeight: FontWeight.w700,
                   color: Theme.of(context).colorScheme.primary,
                 ),

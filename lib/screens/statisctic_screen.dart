@@ -1,8 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:income_expense_tracker_app/data/transactions.dart';
-import 'package:income_expense_tracker_app/utils/currency_format.dart';
+import 'package:expense_tracker_app/data/transactions.dart';
+import 'package:expense_tracker_app/utils/currency_format.dart';
 
 class StatisticScreen extends StatefulWidget {
   const StatisticScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _StatisticScreenState extends State<StatisticScreen> {
           centerTitle: true,
           titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.w600,
-                color: Theme.of(context).colorScheme.background,
+                color: Theme.of(context).colorScheme.surface,
               ),
           elevation: 0,
           leading: IconButton(
@@ -60,10 +60,10 @@ class _StatisticScreenState extends State<StatisticScreen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            elevation: 0,
-                            primary: times.contains(time)
+                            backgroundColor: times.contains(time)
                                 ? Theme.of(context).colorScheme.primary
                                 : Colors.transparent,
+                            elevation: 0,
                           ),
                           onPressed: () {
                             debugPrint(time);
@@ -134,10 +134,10 @@ class _StatisticScreenState extends State<StatisticScreen> {
                       ];
                     },
                     touchTooltipData: LineTouchTooltipData(
-                      tooltipBgColor: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withOpacity(0.3),
+                      // tooltipBgColor: Theme.of(context)
+                      //     .colorScheme
+                      //     .primary
+                      //     .withOpacity(0.3),
                     ),
                   ),
                   gridData: FlGridData(
@@ -157,36 +157,36 @@ class _StatisticScreenState extends State<StatisticScreen> {
                       bottom: BorderSide.none,
                     ),
                   ),
-                  titlesData: FlTitlesData(
-                    show: true,
-                    rightTitles: SideTitles(showTitles: false),
-                    leftTitles: SideTitles(showTitles: false),
-                    topTitles: SideTitles(showTitles: false),
-                    bottomTitles: SideTitles(
-                      showTitles: true,
-                      interval: 1,
-                      getTextStyles: (context, value) => TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                      getTitles: (value) {
-                        switch (value.toInt()) {
-                          case 100:
-                            return 'Mon';
-                          case 350:
-                            return 'Tue';
-                          case 600:
-                            return 'Wed';
-                          case 850:
-                            return 'Thu';
-                          default:
-                            return '';
-                        }
-                      },
-                      margin: 10,
-                    ),
-                  ),
+                  // titlesData: FlTitlesData(
+                  //   show: true,
+                  //   rightTitles: SideTitles(showTitles: false),
+                  //   leftTitles: SideTitles(showTitles: false),
+                  //   topTitles: SideTitles(showTitles: false),
+                  //   bottomTitles: SideTitles(
+                  //     showTitles: true,
+                  //     interval: 1,
+                  //     getTextStyles: (context, value) => TextStyle(
+                  //       color: Theme.of(context).colorScheme.primary,
+                  //       fontWeight: FontWeight.bold,
+                  //       fontSize: 16,
+                  //     ),
+                  //     getTitles: (value) {
+                  //       switch (value.toInt()) {
+                  //         case 100:
+                  //           return 'Mon';
+                  //         case 350:
+                  //           return 'Tue';
+                  //         case 600:
+                  //           return 'Wed';
+                  //         case 850:
+                  //           return 'Thu';
+                  //         default:
+                  //           return '';
+                  //       }
+                  //     },
+                  //     margin: 10,
+                  //   ),
+                  // ),
                   minX: 0,
                   minY: 0,
                   maxX: 1000,
@@ -203,7 +203,7 @@ class _StatisticScreenState extends State<StatisticScreen> {
                         FlSpot(1000, 300),
                       ],
                       isCurved: true,
-                      colors: gradientColors,
+                      // colors: gradientColors,
                       barWidth: 3,
                       // isStrokeCapRound: true,
                       dotData: FlDotData(
@@ -212,9 +212,9 @@ class _StatisticScreenState extends State<StatisticScreen> {
 
                       belowBarData: BarAreaData(
                         show: true,
-                        colors: gradientColors
-                            .map((color) => color.withOpacity(0.2))
-                            .toList(),
+                        // colors: gradientColors
+                        //     .map((color) => color.withOpacity(0.2))
+                        //     .toList(),
                       ),
                     ),
                   ],
@@ -285,7 +285,7 @@ class _StatisticScreenState extends State<StatisticScreen> {
                           tx['title']!,
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle1
+                              .titleMedium
                               ?.copyWith(
                                 fontWeight: FontWeight.w500,
                                 color: spendingIndex == transactions.indexOf(tx)
@@ -297,7 +297,7 @@ class _StatisticScreenState extends State<StatisticScreen> {
                           tx['date']!,
                           style: Theme.of(context)
                               .textTheme
-                              .subtitle2
+                              .titleSmall
                               ?.copyWith(
                                 color: spendingIndex == transactions.indexOf(tx)
                                     ? Colors.white

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:income_expense_tracker_app/routes/main.dart';
-import 'package:income_expense_tracker_app/theme.dart';
+import 'package:expense_tracker_app/routes/main.dart';
+import 'package:expense_tracker_app/theme.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,26 +15,28 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: () => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData.light().copyWith(
-          colorScheme: lightColorScheme,
-          textTheme: GoogleFonts.interTextTheme(),
-          buttonTheme: ButtonThemeData(
-            colorScheme: Theme.of(context).colorScheme,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+      builder: (ctx, widget) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData.light().copyWith(
+            colorScheme: lightColorScheme,
+            textTheme: GoogleFonts.interTextTheme(),
+            buttonTheme: ButtonThemeData(
+              colorScheme: Theme.of(context).colorScheme,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
           ),
-        ),
-        darkTheme: ThemeData.dark().copyWith(
-          colorScheme: darkColorScheme,
-          textTheme: GoogleFonts.interTextTheme(),
-        ),
-        title: 'Trackering Yours',
-        initialRoute: AppRoutes.wizardRoute,
-        onGenerateRoute: AppRoutes.onGenerateRoute,
-      ),
+          darkTheme: ThemeData.dark().copyWith(
+            colorScheme: darkColorScheme,
+            textTheme: GoogleFonts.interTextTheme(),
+          ),
+          title: 'Trackering Yours',
+          initialRoute: AppRoutes.wizardRoute,
+          onGenerateRoute: AppRoutes.onGenerateRoute,
+        );
+      },
     );
   }
 }
